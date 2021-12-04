@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "world",
+    "terminal-client"
+]
