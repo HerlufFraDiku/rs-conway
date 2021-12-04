@@ -37,8 +37,8 @@ impl World {
     pub fn tick(&mut self) {
         let mut new_cells = vec![vec![0 as u8; self.config.width]; self.config.height];
 
-        for x in 0..self.config.width {
-            for y in 0..self.config.height {
+        for x in 0..self.config.height {
+            for y in 0..self.config.width {
                 // Make signed versions of indicies
                 let ix = isize::try_from(x).unwrap();
                 let iy = isize::try_from(y).unwrap();
@@ -102,7 +102,7 @@ impl World {
             for cell in row.iter() {
                 match *cell {
                     1 => string.push('#'),
-                    _ => string.push('.'),
+                    _ => string.push(' '),
                 }
             }
             string.push_str("\n");
@@ -119,7 +119,7 @@ impl fmt::Display for World {
             for cell in row.iter() {
                 match *cell {
                     1 => string.push('#'),
-                    _ => string.push('.'),
+                    _ => string.push(' '),
                 }
             }
             string.push_str("\n");

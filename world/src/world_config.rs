@@ -45,8 +45,8 @@ impl WorldConfig {
 
         // Read the seed from file
         let mut seed = vec![vec![0; width]; height];
-        for x in 0..width {
-            for y in 0..height {
+        for x in 0..height {
+            for y in 0..width {
                 if ['#', '1'].contains(&lines[x][y]) {
                     seed[x][y] = 1;
                 } else {
