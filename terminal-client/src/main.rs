@@ -10,7 +10,7 @@ fn main() {
 
     let mut world = World::new(config);
 
-    for _ in 0..290 {
+    for _ in 0..9 {
         print!("{esc}[2J{esc}[1;1H", esc = 27 as char);
         println!("{}", world);
         thread::sleep(time::Duration::from_millis(150));
